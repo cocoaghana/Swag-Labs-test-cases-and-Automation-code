@@ -1,2 +1,2 @@
 # Test-cases-practice
-Learning to write test cases
+Learning to write test cases and Automation with cypress
