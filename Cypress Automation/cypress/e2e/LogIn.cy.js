@@ -31,5 +31,12 @@ describe('Login Function', () => {
     cy.get('[data-test="login-button"]').click()
     cy.get('.error-message-container').should('have.text','Epic sadface: Password is required')
   })
+  it('TCID_006 Invalid login', () => {
+    cy.visit('https://www.saucedemo.com')
+    cy.get('[data-test="username"]').type('standard')
+    cy.get('[data-test="password"]').type('secret')
+    cy.get('[data-test="login-button"]').click()
+    cy.get('.error-message-container').should('have.text','Epic sadface: Username and password do not match any user in this service')
+  })
 
 })
