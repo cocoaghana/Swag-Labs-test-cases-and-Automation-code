@@ -18,7 +18,7 @@ describe('Payment Function', () => {
         cy.get('#finish').click()
         cy.url().should('include', '/checkout-complete.html')
     })
-    it('TCID_029 Bach home', () => {
+    it('TCID_029 Back home', () => {
         cy.get('#finish').click()
         cy.get('#back-to-products').click()
         cy.url().should('include', '/inventory.html')

@@ -6,7 +6,7 @@ describe('Navigation Function', () => {
     })
     it('TCID_010 All item', () => {
       cy.get('#react-burger-menu-btn').click()
-      cy.get('#inventory_sidebar_link').click()
+      cy.get('#inventory_sidebar_link').should('be.visible').click()
       cy.url().should('include', '/inventory.html') 
     })
     it('TCID_011 About', () => {
@@ -15,7 +15,7 @@ describe('Navigation Function', () => {
     })
     it('TCID_012 Logout', () => {
       cy.get('#react-burger-menu-btn').click()
-      cy.get('#logout_sidebar_link').click()
+      cy.get('#logout_sidebar_link').should('be.visible').click()
       cy.url().should('include', 'https://www.saucedemo.com')
     })
     
